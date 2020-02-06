@@ -6,6 +6,16 @@
 #include <vector>
 using namespace std;
 
+/*
+basic gcd computation,
+euclid extended gcd ( Line 81) : for get multiply inverse (used  in m_inv : line 137)
+2진 모듈로 거듭제곱법 ( binary modulo exponentiation) for fast a^b mod cal
+Miller_Rabin test function Line : 198 ( prime test : line 166 )
+keyverify (  Is P & Q are prime?    gcd(  pi_(P*Q) (오일러 파이.. == ( p-1) * (q-1)) , e) == 1 ( e 와 pi_n 이 서로소인가)
+sign (Line 241  ,  m ^d (d is private key , m is plain text or text wants to be signatured ) mod n
+verify (Line 246 ,   s^ e ( s is ciphertext or signatured text , e is public key) mod n == m  mod n ? 1: -3 )
+
+*/
  int gcd( int a,  int b)
 {
 	if (a < b)
