@@ -12,10 +12,10 @@ string token_string(const string& s, int& i)
 	for (; i < s.size(); ++i)
 	{
 		if (s[i] == ' ')
-		{
+		{	// s[i] 가 공백을 가르키므로 i를 하나 띄어놓는다. tmp가 문자열 마지막 단어라면? -> s.end() 와 같아진다.
 			i++; return tmp;
 		}
-		tmp += s[i];
+		tmp += s[i];	//공백이 아니라면 
 	}
 
 	return tmp;
